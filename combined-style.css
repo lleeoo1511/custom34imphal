@@ -1167,6 +1167,7 @@ select:focus {
   display: flex;
   align-items: center;
   gap: 12px;
+  justify-content: space-between;
 }
 
 .cart-page .cart-bar-split {
@@ -1211,7 +1212,7 @@ select:focus {
 }
 
 #order-all-btn {
-  margin-left: 425px;
+  margin-left: 0;
   padding: 10px 16px;
   text-align: center;
   width: auto;
@@ -1270,14 +1271,25 @@ select:focus {
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    justify-content: space-between;
   }
 
   .return-btn,
   .cart-bar-split #order-all-btn {
-    flex: 1 1 0;
-    width: auto;
+    flex: 1 1 50%;
+    width: calc((100% - 10px) / 2);
     min-width: 0;
+    min-height: 44px;
+    padding: 12px 14px;
     justify-content: center;
+  }
+
+  .cart-page .cart-panel,
+  .cart-page .cart-bar-split {
+    width: min(680px, calc(100vw - 24px));
+    max-width: calc(100vw - 24px);
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
