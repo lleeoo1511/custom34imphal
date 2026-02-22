@@ -1323,3 +1323,37 @@ select:focus {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Tap/selection flicker fix for mobile clickable elements */
+.product-card,
+.product-card *,
+.add-to-cart-btn,
+.qty-btn,
+#order-all-btn {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.product-card,
+.add-to-cart-btn,
+.qty-btn,
+#order-all-btn {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.product-card:focus,
+.add-to-cart-btn:focus,
+.qty-btn:focus,
+#order-all-btn:focus {
+  outline: none;
+}
+
+.product-card:focus-visible,
+.add-to-cart-btn:focus-visible,
+.qty-btn:focus-visible,
+#order-all-btn:focus-visible {
+  outline: 2px solid #d2e0ff;
+  outline-offset: 2px;
+}
+
