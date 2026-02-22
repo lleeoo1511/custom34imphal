@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="data:,">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom34 - Cart</title>
+  <link rel="stylesheet" href="combined-style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+<body class="cart-page">
+  <button id="cart-toggle-btn" class="cart-toggle-btn" aria-label="Back to shop" aria-expanded="true">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-toggle-count" class="cart-toggle-count">0</span>
+  </button>
+
+  <div class="cart-page-header">
+    <h1>Your Cart</h1>
+    <p>Review items and place your order.</p>
+  </div>
+
+  <div id="cart-panel" class="cart-panel open">
+    <div class="cart-panel-header">
+      <h3>Your Cart</h3>
+      <span id="cart-count-badge">0 items</span>
+    </div>
+    <div id="cart-items" class="cart-items">
+      <p class="cart-empty-text">Your cart is empty.</p>
+    </div>
+    <div class="customer-details">
+      <h4>Customer Details</h4>
+      <label for="customer-phone">Phone Number</label>
+      <input id="customer-phone" type="tel" inputmode="numeric" placeholder="Enter your phone number">
+
+      <label for="service-type">Service Type</label>
+      <select id="service-type">
+        <option value="">Select service</option>
+        <option value="Pickup">Pickup</option>
+        <option value="Delivery">Delivery</option>
+      </select>
+
+      <div id="customer-location-field" class="customer-location-field hidden">
+        <label for="customer-location">Location</label>
+        <input id="customer-location" type="text" placeholder="Enter your area/location">
+        <div id="customer-location-suggestions" class="customer-location-suggestions hidden"></div>
+      </div>
+    </div>
+    <div class="cart-panel-footer">
+      <div class="cart-summary">
+        <div class="cart-summary-row">
+          <span>Items total</span>
+          <strong id="cart-items-total">&#8377;0</strong>
+        </div>
+        <div class="cart-summary-row">
+          <span id="cart-delivery-label">Delivery</span>
+          <strong id="cart-delivery-charge">&#8377;0</strong>
+        </div>
+        <div class="cart-summary-row cart-summary-row-grand">
+          <span>Total</span>
+          <strong id="cart-total">&#8377;0</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cart-bar" class="cart-bar cart-bar-split open">
+    <button id="return-btn" class="return-btn" type="button">
+      <span class="return-arrow">&#8592;</span>
+      Return
+    </button>
+    <button id="order-all-btn">Place order</button>
+  </div>
+
+  <script src="combined-script.js"></script>
+</body>
+</html>
